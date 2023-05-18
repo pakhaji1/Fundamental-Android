@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparan"
+    tools:context=".settings.SettingActivity">
+
+    <ImageView
+        android:id="@id/ic_theme_imageview"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/setting_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_night_mode" />
+
+    <TextView
+        android:id="@+id/theme_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/theme"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_theme_imageview"
+        app:layout_constraintStart_toEndOf="@+id/ic_theme_imageview"
+        app:layout_constraintTop_toTopOf="@+id/ic_theme_imageview" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/theme_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_theme_imageview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ic_theme_imageview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
